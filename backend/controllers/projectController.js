@@ -46,7 +46,7 @@ exports.createProject = catchAsyncErrors(async (req, res, next) => {
 
 // Get All Project
 exports.getAllProjects = catchAsyncErrors(async (req, res) => {
-  const resultPerPage = 8;
+  const resultPerPage = 6;
   const projectsCount = await Project.countDocuments();
 
   const apiFeature = new ApiFeatures(Project.find(), req.query)
