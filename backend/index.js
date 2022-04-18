@@ -31,6 +31,9 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
+app.get("/", (req, res) => {
+  res.send("Home Axis server is Running");
+});
 const server = app.listen(process.env.PORT, () => {
   console.log(`Server is Running on port : ${process.env.PORT} `);
 });
