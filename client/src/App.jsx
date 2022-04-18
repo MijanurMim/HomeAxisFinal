@@ -33,6 +33,9 @@ function App() {
   // Checking if user is authorized or not
   const { user, loading } = useSelector((state) => state.user);
 
+  // Stopping others to inspect the site
+  window.addEventListener("contextmenu", (e) => e.preventDefault());
+
   return (
     <Router>
       {/* common for all  */}
