@@ -4,6 +4,12 @@ const errorMiddleware = require("./middleware/error.js");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const fileUpload = require("express-fileupload");
+const path = require("path");
+
+// config
+if (process.env.NODE_ENV !== "PRODUCTION") {
+  require("dotenv").config({ path: "backend/config/config.env" });
+}
 
 // app.use(express.json());
 app.use(cookieParser());
@@ -26,6 +32,12 @@ const project = require("./routes//projectRoute");
 
 app.use("/api/v1", project);
 app.use("/api/v1", user);
+
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "../client/build/index.html"));
+});
 
 // Middleware for error
 app.use(errorMiddleware);
