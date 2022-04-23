@@ -21,7 +21,7 @@ const Navbar = ({ user }) => {
   return (
     <>
       <div className="sticky top-0 left-0 z-50 w-full  shadow-md ">
-        <div className="mt-2  items-center justify-around bg-gray-800 py-4 md:flex  md:px-0 xl:mx-36  ">
+        <div className="  items-center justify-around bg-gray-800 py-4 md:flex md:py-8  md:px-0  ">
           {/* Navbar title and logo  */}
           <div className="    flex cursor-pointer items-center  justify-center text-gray-300">
             <span className=" text-xl text-orange-500">

@@ -14,7 +14,6 @@ import {
   clearErrors,
   getProjectDetails,
 } from "../../redux/actions/projectAction";
-import Spinner from "../Spinner/Spinner";
 import "./SingleCategoryItem.css";
 
 const SingleProjectItem = () => {
@@ -42,105 +41,81 @@ const SingleProjectItem = () => {
   }, [dispatch, id, error, alert]);
 
   return (
-    <>
-      {loading ? (
-        <Spinner />
-      ) : (
-        <div className="mx-10 mt-20 grid grid-cols-1 gap-4 md:mx-20  lg:grid-cols-3 xl:mx-36  ">
-          <div className=" col-span-2 shadow-xl  ">
-            {project.images ? (
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                }}
-                loop={true}
-                spaceBetween={10}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-                navigation={true}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs, Autoplay]}
-                className="h-96 "
-              >
-                {project.images &&
-                  project.images.map((item, i) => (
-                    <SwiperSlide>
-                      <img key={item._id} src={item.url} alt={`${i}`} />
-                    </SwiperSlide>
-                  ))}
-              </Swiper>
-            ) : (
-              "NO Images Found"
-            )}
-            <Swiper
-              onSwiper={setThumbsSwiper}
-              loop={true}
-              spaceBetween={10}
-              slidesPerView={4}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              freeMode={true}
-              watchSlidesProgress={true}
-              modules={[FreeMode, Navigation, Thumbs, Autoplay]}
-              className="h-24 md:h-36 "
-            >
-              {project.images &&
-                project.images.map((item, i) => (
-                  <SwiperSlide>
-                    <img key={item._id} src={item.url} alt={`${i}`} />
-                  </SwiperSlide>
-                ))}
-              {/* <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-              </SwiperSlide>
+    <div className="mx-10 mt-20 grid grid-cols-1 gap-4 md:mx-20  lg:grid-cols-3 xl:mx-36  ">
+      <div className=" col-span-2 shadow-xl  ">
+        {project.images ? (
+          <Swiper
+            style={{
+              "--swiper-navigation-color": "#fff",
+              "--swiper-pagination-color": "#fff",
+            }}
+            loop={true}
+            spaceBetween={10}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            navigation={true}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+            className="h-96 "
+          >
+            {project.images &&
+              project.images.map((item, i) => (
+                <SwiperSlide>
+                  <img key={item._id} src={item.url} alt={`${i}`} />
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        ) : (
+          "NO Images Found"
+        )}
+        <Swiper
+          onSwiper={setThumbsSwiper}
+          loop={true}
+          spaceBetween={10}
+          slidesPerView={4}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          freeMode={true}
+          watchSlidesProgress={true}
+          modules={[FreeMode, Navigation, Thumbs, Autoplay]}
+          className="h-24 md:h-36 "
+        >
+          {project.images &&
+            project.images.map((item, i) => (
               <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                <img key={item._id} src={item.url} alt={`${i}`} />
               </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-              </SwiperSlide> */}
-            </Swiper>
-          </div>
+            ))}
+        </Swiper>
+      </div>
 
-          {/* Single Project Information  */}
-          <div className="  flex flex-col items-start justify-center shadow-lg hover:shadow-2xl  	">
-            <ul className="mx-10 flex flex-col text-slate-600">
-              <li className="text-slate-600">
-                <span className="text-lg xl:text-xl">
-                  <Typical
-                    loop={Infinity}
-                    className="text-slate-600"
-                    wrapper="b"
-                    steps={["DETAILS", 2000, "INFORMATION", 2000]}
-                  ></Typical>
-                </span>
-                <br />
-                <span className="text-lg text-orange-500 xl:text-2xl">
-                  {project.name}
-                </span>
-              </li>
-              <li className="text-xl">Location: {project.category}</li>
-              <li className="text-xl">Cost: {project.price}</li>
-              <li className="text-slate-500">{project.description}</li>
-            </ul>
-          </div>
-        </div>
-      )}
-    </>
+      {/* Single Project Information  */}
+      <div className="  flex flex-col items-start justify-center shadow-lg hover:shadow-2xl  	">
+        <ul className="mx-10 flex flex-col text-slate-600">
+          <li className="text-slate-600">
+            <span className="text-lg xl:text-xl">
+              <Typical
+                loop={Infinity}
+                className="text-slate-600"
+                wrapper="b"
+                steps={["DETAILS", 3000, "INFORMATION", 3000]}
+              ></Typical>
+            </span>
+            <br />
+            <span className="text-lg text-orange-500 xl:text-2xl">
+              {project.name}
+            </span>
+          </li>
+          <li className="text-xl">Location: {project.category}</li>
+          <li className="text-xl">Cost: {project.price}</li>
+          <li className="text-slate-500">{project.description}</li>
+        </ul>
+      </div>
+    </div>
   );
 };
 

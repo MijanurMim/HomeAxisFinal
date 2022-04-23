@@ -39,7 +39,7 @@ const HomeProjects = () => {
             <p className="my-10 text-center text-2xl font-bold text-orange-500 md:text-4xl">
               PROJECTS
             </p>
-            <div className="xl:mx-30 mx-5  grid  grid-cols-1 justify-items-center gap-8 lg:mx-20 lg:grid-cols-2 xl:grid-cols-3 2xl:mx-60 	">
+            <div className="xl:mx-30 mx-5  grid  grid-cols-1 justify-items-center gap-8 lg:mx-20 lg:grid-cols-2 xl:grid-cols-3 2xl:mx-60	">
               {projects &&
                 projects.map((project) => (
                   <ProjectItem
@@ -48,6 +48,18 @@ const HomeProjects = () => {
                   ></ProjectItem>
                 ))}
             </div>{" "}
+            {/* Experiment Masonry  */}
+            <div>
+              <p className="my-10 text-center text-2xl font-bold text-orange-500 md:text-4xl">
+                FEATURED WORKS
+              </p>
+              <div class="grid grid-cols-6 grid-rows-3 gap-4">
+                <div class="bg-orange-400col-span-4 col-start-2">01</div>
+                <div class="col-start-1 col-end-3 bg-orange-400">02</div>
+                <div class="col-span-2 col-end-7 bg-orange-400">03</div>
+                <div class="col-start-1 col-end-7 bg-orange-400">04</div>
+              </div>
+            </div>
             {/* Pagination section  */}
             {resultPerPage < projectsCount && (
               <div className="paginationBox ">

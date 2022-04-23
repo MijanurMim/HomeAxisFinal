@@ -27,7 +27,7 @@ const About = () => {
                   loop={Infinity}
                   className="text-slate-600"
                   wrapper="b"
-                  steps={["INTRODUCING", 2000, "YOUR BEST GUIDE", 2000]}
+                  steps={["INTRODUCING", 3000, "YOUR BEST GUIDE", 3000]}
                 ></Typical>
               </span>
               <br />
@@ -60,7 +60,7 @@ const About = () => {
 
       {/* Base about section  */}
       <div className=" m-5 mb-60 grid grid-cols-1 gap-5 md:mt-96 lg:mt-20  lg:grid-cols-3  ">
-        <di className=" p-5 shadow-lg duration-300 hover:shadow-2xl">
+        <div className=" p-5 shadow-lg duration-300 hover:shadow-2xl">
           <div className="flex flex-row text-2xl font-bold text-slate-600">
             <span className=" text-4xl text-orange-500">
               <ion-icon name="hourglass-outline"></ion-icon>
@@ -71,7 +71,7 @@ const About = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
             veritatis numquam deserunt magnam officia quasi culpa incidunt.
           </div>
-        </di>
+        </div>
 
         <div className=" p-5 shadow-lg duration-300 hover:shadow-2xl">
           <div className="flex flex-row text-2xl font-bold text-slate-600">

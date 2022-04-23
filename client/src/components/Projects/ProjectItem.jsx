@@ -9,7 +9,7 @@ const ProjectItem = ({ project }) => {
     <div className="flex flex-col items-center rounded-lg border bg-white shadow-md transition duration-200 ease-in-out hover:scale-105    hover:bg-gray-200">
       <a href="/" className="   " />
       <img
-        className="h-96 w-full rounded-t-lg object-cover   md:rounded-none md:rounded-t-lg"
+        className="h-96 w-full rounded-t-lg object-cover   backdrop-blur-sm md:rounded-none md:rounded-t-lg "
         src={images[0].url}
         alt={name}
       />

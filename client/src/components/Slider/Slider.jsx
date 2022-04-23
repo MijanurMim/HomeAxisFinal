@@ -33,7 +33,7 @@ const Slider = () => {
         >
           <SwiperSlide>
             <img src={sliderImg1} alt="" />
-            <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
+            {/* <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
               <h1 className="text-base text-gray-200 lg:text-4xl">
                 WELCOME TO <br />
                 <span className="text-lg md:text-3xl lg:text-6xl">
@@ -44,12 +44,12 @@ const Slider = () => {
               <p className="text-sm italic text-orange-500  md:mt-5 md:text-2xl">
                 The Best Real Estate Company of The Country
               </p>
-            </div>
+            </div> */}
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={sliderImg2} alt="" />
-            <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
+            {/* <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
               <h1 className="text-base text-gray-200 lg:text-4xl">
                 WELCOME TO <br />
                 <span className="text-lg md:text-3xl lg:text-6xl">
@@ -60,12 +60,12 @@ const Slider = () => {
               <p className="text-sm italic text-orange-500  md:mt-5 md:text-2xl">
                 The Best Real Estate Company of The Country
               </p>
-            </div>
+            </div> */}
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={sliderImg3} alt="" />
-            <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
+            {/* <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
               <h1 className="text-base text-gray-200 lg:text-4xl">
                 WELCOME TO <br />
                 <span className="text-lg md:text-3xl lg:text-6xl">
@@ -76,12 +76,12 @@ const Slider = () => {
               <p className="text-sm italic text-orange-500  md:mt-5 md:text-2xl">
                 The Best Real Estate Company of The Country
               </p>
-            </div>
+            </div> */}
           </SwiperSlide>
 
           <SwiperSlide>
             <img src={sliderImg4} alt="" />
-            <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
+            {/* <div className="hero-text h-40 w-1/2 bg-slate-800	pt-5 opacity-75 md:h-96 md:pt-20	 ">
               <h1 className="text-base text-gray-200 lg:text-4xl">
                 WELCOME TO <br />
                 <span className="text-lg md:text-3xl lg:text-6xl">
@@ -92,7 +92,7 @@ const Slider = () => {
               <p className="text-sm italic text-orange-500  md:mt-5 md:text-2xl">
                 The Best Real Estate Company of The Country
               </p>
-            </div>
+            </div> */}
           </SwiperSlide>
         </Swiper>
       </div>

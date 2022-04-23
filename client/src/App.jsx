@@ -11,7 +11,6 @@ import Navbar from "./components/Navbar/Navbar";
 import SingleProjectItem from "./components/Projects/SingleProjectItem";
 import PrivateRoute from "./components/Route/PrivateRoute";
 import Spinner from "./components/Spinner/Spinner";
-import TopBar from "./components/TopBar/TopBar";
 import About from "./pages/About/About";
 import Contact from "./pages/ContactUs/Contact";
 import Home from "./pages/Home/Home";
@@ -34,12 +33,12 @@ function App() {
   const { user, loading } = useSelector((state) => state.user);
 
   // Stopping others to inspect the site
-  window.addEventListener("contextmenu", (e) => e.preventDefault());
+  // window.addEventListener("contextmenu", (e) => e.preventDefault());
 
   return (
     <Router>
       {/* common for all  */}
-      <TopBar></TopBar>
+      {/* <TopBar></TopBar> */}
 
       <Navbar user={user}></Navbar>
 

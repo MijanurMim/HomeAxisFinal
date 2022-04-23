@@ -6,9 +6,9 @@ import { Watch } from "react-loader-spinner";
 const Spinner = () => {
   return (
     <>
-      <container className="flex justify-center my-80">
+      <div className="my-80 flex justify-center">
         <Watch color="#FF9800" ariaLabel="loading" />
-      </container>
+      </div>
     </>
   );
 };
